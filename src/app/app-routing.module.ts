@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '/idle',
+    path: 'idle',
     loadChildren: './components/idle/idle.module#IdleModule'
   }
 ];
