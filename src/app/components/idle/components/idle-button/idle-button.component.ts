@@ -9,7 +9,7 @@ import { IdleButtonProps } from './interfaces/idle-button-props.interface';
 export class IdleButtonComponent implements OnInit {
 
   @Input() props: IdleButtonProps;
-  @Output() click: EventEmitter<null> = new EventEmitter<null>();
+  @Output() onClick: EventEmitter<null> = new EventEmitter<null>();
 
   constructor() { }
 
@@ -17,8 +17,7 @@ export class IdleButtonComponent implements OnInit {
   }
 
   onClickEmit () {
-    console.log('Botão clicado!');
-    this.click.emit();
+    this.onClick.emit();
   }
 
 }

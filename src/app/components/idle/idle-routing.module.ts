@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {IdleComponent} from "./containers/idle/idle.component";
+import { IdleComponent } from "./containers/idle/idle.component";
 
 const routes: Routes = [
   {

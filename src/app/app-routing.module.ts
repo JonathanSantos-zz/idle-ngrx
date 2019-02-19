@@ -3,6 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'idle'
+  },
+  {
     path: 'idle',
     loadChildren: './components/idle/idle.module#IdleModule'
   }
