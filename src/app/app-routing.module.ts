@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'idle',
-    loadChildren: './components/idle/idle.module#IdleModule'
+    loadChildren: './modules/idle/idle.module#IdleModule'
   }
 ];
 
