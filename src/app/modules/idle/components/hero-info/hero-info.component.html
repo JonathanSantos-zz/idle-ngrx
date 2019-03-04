@@ -1,0 +1,10 @@
+<div *ngIf="hero">
+  <div>
+    <div>{{ hero.hp }}</div>
+    <div>{{ hero.level }}</div>
+    <div>{{ hero.totalMoney }}</div>
+  </div>
+  <div>
+    <app-equipments-info [equipments]="hero.equipments"></app-equipments-info>
+  </div>
+</div>

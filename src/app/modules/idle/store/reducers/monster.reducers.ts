@@ -1,23 +1,18 @@
-import { initialMonsterState, MonsterState } from '../state/monster.state';
 import { MonsterActions, MonsterActionsEnum } from '../actions/monster.action';
+import { initialIdleState } from '../state/idle.state';
+import { Monster } from '../../interfaces/monster.interface';
 
 export const monsterReducers = (
-  state = initialMonsterState,
+  state = initialIdleState,
   action: MonsterActions
-): MonsterState => {
+): Monster => {
   switch (action.type) {
     case MonsterActionsEnum.AddMonster:
     case MonsterActionsEnum.ChangeMonster: {
-      return {
-        ...state,
-        monster: action.monster
-      };
+      return state.monster;
     }
     case MonsterActionsEnum.RemoveMonster: {
-      return {
-        ...state,
-        monster: null
-      };
+      return null;
     }
   }
 };

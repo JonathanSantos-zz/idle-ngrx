@@ -1,19 +1,17 @@
-import { HeroState, initialHeroState } from '../state/hero.state';
 import { HeroActions, HeroActionsEnum } from '../actions/hero.action';
+import { initialIdleState } from '../state/idle.state';
+import { Hero } from '../../interfaces/hero.interface';
 
 export const heroReducers = (
-  state = initialHeroState,
+  state = initialIdleState,
   action: HeroActions
-): HeroState => {
+): Hero => {
   switch (action.type) {
     case HeroActionsEnum.AddHero: {
-      return {
-        ...state,
-        hero: action.payload
-      };
+      return state.hero;
     }
     case HeroActionsEnum.AddExperience: {
-      return state;
+      return state.hero;
     }
   }
 };

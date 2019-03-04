@@ -1,22 +1,20 @@
-import { EquipmentState, initialEquipmentState } from '../state/equipment.state';
 import { EquipmentActions, EquipmentActionsEnum } from '../actions/equipment.action';
+import { Equipment } from '../../interfaces/equipment.interface';
+import { initialIdleState } from '../state/idle.state';
 
 export const equipmentReducers = (
-  state = initialEquipmentState,
+  state = initialIdleState,
   action: EquipmentActions
-): EquipmentState => {
+): Equipment[] => {
   switch (action.type) {
     case EquipmentActionsEnum.AddEquipments: {
-      return {
-        ...state,
-        equipments: [...state.equipments, ...action.equipments]
-      };
+      return [...state.hero.equipments, ...action.equipments];
     }
     case EquipmentActionsEnum.UpgradeEquipments: {
-      return state;
+      return state.hero.equipments;
     }
     case EquipmentActionsEnum.RemoveEquipments: {
-      return state;
+      return state.hero.equipments;
     }
   }
 };
