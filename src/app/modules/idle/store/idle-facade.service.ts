@@ -22,7 +22,8 @@ export class IdleFacadeService {
       equipments: [],
       totalMoney: 0,
       level: 0,
-      hp: 100
+      hp: 100,
+      name: 'Joao'
     }));
   }
 

@@ -1,6 +1,6 @@
-<ul>
-  <li *ngFor="let equipment of equipments">
-    {{ equipment | json }}
-  </li>
-  <li *ngIf="!equipments.length">Não possui equipamentos</li>
-</ul>
+<div>
+  <div *ngFor="let equipment of equipments">
+    <app-equipment-info [equipment]="equipment"></app-equipment-info>
+  </div>
+  <div *ngIf="!equipments.length">Não possui equipamentos</div>
+</div>

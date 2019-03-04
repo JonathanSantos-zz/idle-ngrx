@@ -1,0 +1,27 @@
+$value-change: 20;
+
+$background-primary: #3192BC;
+$background-primary-darken: darken($background-primary, $value-change);
+$background-primary-lighten: lighten($background-primary, $value-change);
+
+$background-info: #FCAB10;
+$background-info-darken: darken($background-info, $value-change);
+$background-info-lighten: lighten($background-info, $value-change);
+
+$background-error: #F8333C;
+$background-error-darken: darken($background-error, $value-change);
+$background-error-lighten: lighten($background-error, $value-change);
+
+$background-success: #44AF69;
+$background-success-darken: darken($background-success, $value-change);
+$background-success-lighten: lighten($background-success, $value-change);
+
+$background-clean: #FFFDF7;
+$background-clean-darken: darken($background-clean, $value-change);
+$background-clean-lighten: lighten($background-clean, $value-change);
+
+$color-primary: #3192BC;
+$color-info: #FCAB10;
+$color-error: #F8333C;
+$color-success: #44AF69;
+$color-clean: #FFFDF7;

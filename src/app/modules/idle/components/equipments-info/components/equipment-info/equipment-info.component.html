@@ -1,0 +1,32 @@
+<div class="container-equipment">
+  <div class="row">
+    <div class="col-3">
+      <div class="container-equipment-picture">
+        <img [src]="equipment.imgPath" [alt]="equipment.name">
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="row">
+        <div class="col-5">
+          Nome do equipamento:
+        </div>
+        <div class="col-7">
+          {{ equipment.name }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5">
+          Level:
+        </div>
+        <div class="col-7">
+          {{ equipment.level }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button class="btn btn-primary float-right margin-floated">Melhorar por {{ equipment.value }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

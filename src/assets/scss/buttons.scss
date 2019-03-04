@@ -1,0 +1,31 @@
+@import 'colors';
+
+$types: primary info error success clean;
+
+.btn {
+  border: none;
+  color: $color-primary;
+  background: $background-clean;
+  border-radius: 14px;
+  padding: 6px 15px;
+  cursor: pointer;
+
+  &.btn-primary {
+    color: $color-clean;
+    background: $background-primary;
+
+    &:active {
+      background: $background-primary-darken;
+    }
+
+    &:disabled {
+      cursor: default;
+      color: $color-clean;
+      background: $background-primary-lighten;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

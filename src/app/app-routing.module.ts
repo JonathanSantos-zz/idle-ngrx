@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'idle',
     loadChildren: './modules/idle/idle.module#IdleModule'
+  },
+  {
+    path: 'style-guide',
+    loadChildren: './modules/style-guide/style-guide.module#StyleGuideModule'
   }
 ];
 
