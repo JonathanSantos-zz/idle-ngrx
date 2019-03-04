@@ -1,6 +1,5 @@
 import {NgModule} from "@angular/core";
 import {IdleComponent} from "./idle/idle.component";
-import {IdleButtonComponent} from "../components/idle-button/idle-button.component";
 import {CommonModule} from "@angular/common";
 
 @NgModule({
@@ -8,8 +7,7 @@ import {CommonModule} from "@angular/common";
     CommonModule
   ],
   declarations: [
-    IdleComponent,
-    IdleButtonComponent
+    IdleComponent
   ],
   exports: [
     IdleComponent

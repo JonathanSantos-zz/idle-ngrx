@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IdleFacadeService } from '../../store/idle-facade.service';
+import { map, skipWhile } from 'rxjs/operators';
 
 @Component({
   templateUrl: './idle.component.html',
@@ -6,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IdleComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private idleFacadeService: IdleFacadeService
+  ) { }
+
+  hero$ = this.idleFacadeService.hero$;
+  monster$ = this.idleFacadeService.monster$;
 
   ngOnInit() {
-  }
-
-  mostrarLog() {
-    console.log('Teste');
+    this.idleFacadeService.loadHero();
+    this.idleFacadeService.loadMonster();
   }
 
 }
