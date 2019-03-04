@@ -1,10 +1,23 @@
 <div *ngIf="hero">
-  <div>
-    <div>{{ hero.hp }}</div>
-    <div>{{ hero.level }}</div>
-    <div>{{ hero.totalMoney }}</div>
+  <div class="container-hero-info title">
+    <h3>{{ hero.name }}</h3>
   </div>
-  <div>
-    <app-equipments-info [equipments]="hero.equipments"></app-equipments-info>
+  <div class="container-hero-info">
+    <div>
+      <div class="label">Vida total: </div>
+      <div class="label label-info">{{ hero.hp }}hp</div>
+    </div>
+    <div>
+      <div class="label">Level: </div>
+      <div class="label label-info">{{ hero.level }}</div>
+    </div>
+    <div>
+      <div class="label">Dinheiro: </div>
+      <div class="label label-info">{{ hero.totalMoney }}</div>
+    </div>
+    <div>
+      <div class="label">Equipamentos: </div>
+      <app-equipments-info [equipments]="hero.equipments"></app-equipments-info>
+    </div>
   </div>
 </div>

@@ -12,11 +12,7 @@ export class IdleComponent implements OnInit {
     private idleFacadeService: IdleFacadeService
   ) {}
 
-  hero$ = this.idleFacadeService.hero$.pipe(map(val => {
-    debugger;
-    return val;
-  }));
-
+  hero$ = this.idleFacadeService.hero$;
   monster$ = this.idleFacadeService.monster$;
 
   ngOnInit() {
